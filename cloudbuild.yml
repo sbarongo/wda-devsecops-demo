@@ -1,5 +1,5 @@
 steps:
   - name: 'ubuntu'
-    args: ['echo','Hello!!This is my first build run in Google Cloud Platform']
+    args: ['echo','Hello!!This is the first build run in Google Cloud Platform']
 options:
   logging: CLOUD_LOGGING_ONLY
