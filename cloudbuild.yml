@@ -12,9 +12,6 @@ steps:
           mvn snyk:test -fn 
     id: Snyk SCA
   
-options:
-logging: CLOUD_LOGGING_ONLY
-
   #Execute SonarCloud Scan
   - name: maven:3-openjdk-18-slim
     entrypoint: mvn
