@@ -11,11 +11,12 @@ steps:
           export SNYK_TOKEN
           mvn snyk:test -fn 
     id: Snyk SCA
-steps:
+
   #Execute SonarCloud Scan
-  - name: maven:3-openjdk-18-slim
+   - name: maven:3-openjdk-18-slim
     entrypoint: mvn
-    args: ['verify', 'sonar:sonar','-Dsonar.host.url=https://sonarcloud.io','-Dsonar.organization=sbarongo','-Dsonar.projectKey=sbarongo_wda-devsecops-demo','-Dsonar.login=4fb776f978682e9686f090735e39ef7e6202c178]
+    args: ['verify', 'sonar:sonar','-Dsonar.host.url=https://sonarcloud.io','-Dsonar.organization=sbarongo','-Dsonar.projectKey=sbarongo_wda-devsecops-demo','-Dsonar.token=${_SONAR_TOKEN}']
+    id: SAST Scan using SonarCloud in GCP DevSecOps Pipeline
 
 options:
   logging: CLOUD_LOGGING_ONLY

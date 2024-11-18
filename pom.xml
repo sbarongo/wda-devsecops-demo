@@ -25,8 +25,6 @@
 	<build>
 	<plugins>
 <!--# Changes for Software Composition Analysis Scan using Snyk
-#By ASecurityGuru
-#5/12/2022 11:14 AM IST
 -->
     <plugin>
       <groupId>io.snyk</groupId>
